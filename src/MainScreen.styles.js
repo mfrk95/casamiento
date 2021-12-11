@@ -1,13 +1,26 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
+  nosotrosGrid: {
+    backgroundSize: "cover",
+    width: "100%",
+    [theme.breakpoints.up("xl")]: {
+      height: 1000,
+    },
+    height: 700,
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+
   nosCasamosGrid: {
     backgroundColor: "rgba(122, 130, 137, 0.4)",
-    position: "absolute",
-    top: 100,
-    left: 750,
     height: 600,
-    minWidth: 500,
+    maxWidth: 500,
+    [theme.breakpoints.up("xl")]: {
+      marginRight: "10em !important",
+    },
+    marginRight: "4em !important",
   },
   nosCasamosFont: {
     color: "white",
@@ -15,7 +28,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "100px !important",
     fontWeight: "bold !important",
     marginTop: "100px !important",
-    marginLeft: "30px !important",
+    [theme.breakpoints.up("xl")]: {
+      marginRight: "100px !important",
+      marginLeft: "100px !important",
+    },
+    marginLeft: "80px !important",
   },
   nosCasamosIneMati: {
     color: "white",
@@ -29,11 +46,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "50px !important",
     fontWeight: "bold !important",
     textAlign: "center",
-  },
-
-  nosotrosFoto: {
-    maxWidth: "100%",
-    height: "auto",
   },
 
   fatimaYAnillosGrid: {

@@ -144,8 +144,15 @@ export default function MainScreen() {
   };
   return (
     <Grid container>
-      <Grid item xs={12}>
-        <Grid item xs={12} className={classes.nosCasamosGrid}>
+      <Grid
+        item
+        className={classes.nosotrosGrid}
+        style={{
+          backgroundImage: `url(${nosotros})`,
+        }}
+        xs={12}
+      >
+        <Grid item xs={5} xl={4} className={classes.nosCasamosGrid}>
           <Typography className={classes.nosCasamosFont}>
             {nosCasamosString}
           </Typography>
@@ -157,7 +164,6 @@ export default function MainScreen() {
           </Typography>
         </Grid>
       </Grid>
-      <img src={nosotros} alt="foto" className={classes.nosotrosFoto} />
       <Grid container xs={12} className={classes.fatimaYAnillosGrid}>
         <Grid xl={3} item className={classes.fatimaGrid}>
           <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
