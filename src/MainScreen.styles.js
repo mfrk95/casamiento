@@ -84,12 +84,33 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
 
-  fatimaYAnillosGrid: {
+  capillaYAnillos: {
+    height: 550,
+    display: "flex !important",
+    justifyContent: "space-between",
+  },
+
+  fatimaYCopas: {
     height: 650,
     display: "flex !important",
     justifyContent: "space-between",
   },
+
   fatimaGrid: {
+    display: "flex",
+    alignSelf: "flex-start",
+    [theme.breakpoints.up("xl")]: {
+      marginRight: "230px !important",
+    },
+    [theme.breakpoints.only("xs")]: {
+      marginLeft: "10px !important",
+      marginTop: "50px !important",
+    },
+    marginLeft: "70px !important",
+    marginTop: "100px !important",
+  },
+
+  capillaGrid: {
     display: "flex",
     alignSelf: "flex-start",
     [theme.breakpoints.up("xl")]: {
@@ -106,7 +127,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   fatimaFoto: {
-    minWidth: "100%",
     [theme.breakpoints.only("xs")]: {
       height: 250,
       marginLeft: 17,
@@ -115,9 +135,36 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 3,
   },
 
+  capillaFoto: {
+    [theme.breakpoints.only("xs")]: {
+      height: 250,
+      marginLeft: 17,
+    },
+    height: 458,
+    width: 458,
+    borderRadius: 3,
+  },
+
   anillosConTextoGrid: {
     [theme.breakpoints.up("xl")]: {
-      marginRight: "250px !important",
+      marginRight: "130px !important",
+      height: 400,
+    },
+    [theme.breakpoints.only("xs")]: {
+      marginTop: "30px !important",
+      marginLeft: "0px !important",
+      marginRight: "0px !important",
+    },
+    display: "flex !important",
+    flexDirection: "column !important",
+    justifySelf: "flex-end",
+    marginTop: "120px !important",
+    marginRight: "150px !important",
+  },
+
+  copasConTextoGrid: {
+    [theme.breakpoints.up("xl")]: {
+      marginLeft: "210px !important",
       height: 400,
     },
     [theme.breakpoints.only("xs")]: {
@@ -129,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column !important",
     justifySelf: "flex-end",
     marginTop: "100px !important",
-    marginRight: "150px !important",
+    marginRight: "145px !important",
   },
 
   anilloGrid: {
@@ -140,6 +187,16 @@ const useStyles = makeStyles((theme) => ({
   anilloIcon: {
     height: 80,
     width: 80,
+  },
+
+  champagneGrid: {
+    alignSelf: "center",
+    [theme.breakpoints.only("xs")]: {},
+  },
+
+  champagneIcon: {
+    height: 60,
+    width: 60,
   },
 
   teEsperamosFont: {
@@ -156,13 +213,44 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "25px !important",
     color: "#455864",
     letterSpacing: "3px !important",
+    marginBottom: "16px !important",
+  },
+
+  losEsperamosFont: {
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "25px !important",
+    },
+    [theme.breakpoints.only("xs")]: {
+      fontSize: "15px !important",
+      marginLeft: "15px !important",
+      marginRight: "15px !important",
+    },
+    textAlign: "center",
+    fontFamily: "Montserrat !important",
+    fontSize: "25px !important",
+    color: "#455864",
+    letterSpacing: "3px !important",
   },
 
   estacionFatimaFont: {
+    marginTop: "24px !important",
+    textAlign: "center",
+    fontWeight: "600 !important",
+    fontSize: "30px !important",
+    fontFamily: "Montserrat !important",
+    [theme.breakpoints.only("xs")]: {
+      fontSize: "18px !important",
+    },
+    color: "#455864",
+    letterSpacing: "3px !important",
+  },
+
+  capillaFatimaFont: {
     marginTop: "8px !important",
     textAlign: "center",
-    fontWeight: "400 !important",
+    fontWeight: "600 !important",
     fontSize: "30px !important",
+    fontFamily: "Montserrat !important",
     [theme.breakpoints.only("xs")]: {
       fontSize: "18px !important",
     },
@@ -175,9 +263,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "15px !important",
       marginTop: "20px !important",
     },
-    marginTop: "40px !important",
+    marginTop: "25px !important",
     textAlign: "center",
     fontFamily: "Montserrat !important",
+    fontStyle: "italic",
     fontSize: "25px !important",
     color: "#455864",
     letterSpacing: "3px !important",
@@ -187,6 +276,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontFamily: "Montserrat !important",
     fontSize: "20px !important",
+    fontStyle: "italic",
     [theme.breakpoints.only("xs")]: {
       marginTop: "10px !important",
       marginLeft: "10px !important",
@@ -208,7 +298,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px !important",
     letterSpacing: "2px !important",
     backgroundColor: "#d3955d !important",
-    textShadow: "1px 1px grey",
+    textShadow: "1px 1px 10px #333333 !important",
     marginTop: "30px !important",
     height: 60,
     width: 220,
@@ -243,7 +333,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     fontSize: "35px !important",
     color: "white !important",
-    textShadow: "1px 1px grey !important",
+    textShadow: "1px 1px 10px #333333 !important",
     letterSpacing: "3px !important",
   },
 
@@ -256,7 +346,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Montserrat",
     fontSize: "35px !important",
     color: "white !important",
-    textShadow: "1px 1px grey !important",
+    textShadow: "1px 1px 10px #333333 !important",
     letterSpacing: "3px !important",
     marginBottom: "40px !important",
   },
@@ -267,13 +357,13 @@ const useStyles = makeStyles((theme) => ({
       height: "55px !important",
       fontSize: "18px !important",
     },
-    fontFamily: "Montserrat",
+    fontFamily: "Montserrat !important",
     color: "white !important",
     whiteSpace: "nowrap !important",
     fontSize: "20px !important",
-    letterSpacing: "2px !important",
+    letterSpacing: "4px !important",
     backgroundColor: "#d3955d !important",
-    textShadow: "1px 1px grey !important",
+    textShadow: "1px 1px 10px #333333 !important",
     marginTop: "30px !important",
     height: "75px !important",
     width: "400px !important",
@@ -306,7 +396,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "18px !important",
     },
     fontWeight: "400 !important",
-    fontSize: "22px !important",
+    fontSize: "25px !important",
     textAlign: "center !important",
     wordSpacing: "-2px !important",
     color: "#455864 !important",
@@ -319,12 +409,25 @@ const useStyles = makeStyles((theme) => ({
     },
     marginTop: "40px !important",
     fontWeight: "400 !important",
-    fontSize: "22px !important",
+    fontSize: "25px !important",
     textAlign: "center !important",
     wordSpacing: "-2px !important",
     color: "#455864 !important",
     letterSpacing: "4px !important",
     fontFamily: "Montserrat !important",
+  },
+
+  verDatosButton: {
+    fontFamily: "Montserrat !important",
+    color: "white !important",
+    fontSize: "20px !important",
+    letterSpacing: "2px !important",
+    backgroundColor: "#d3955d !important",
+    textShadow: "1px 1px 10px #333333 !important",
+    marginTop: "30px !important",
+    height: "60px !important",
+    width: "220px !important",
+    borderRadius: "8px !important",
   },
   timerMainContainer: {
     [theme.breakpoints.only("xs")]: {
@@ -344,6 +447,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "400 !important",
     fontSize: "30px !important",
     textAlign: "center !important",
+    textShadow: "1px 1px 10px #333333",
     color: "white !important",
     letterSpacing: "3px !important",
   },
@@ -351,12 +455,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       fontSize: "15px !important",
     },
-    marginTop: "-10px !important",
+    marginTop: "-5px !important",
     fontWeight: "400 !important",
     fontSize: "22px !important",
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerHoursText: {
     fontWeight: "400 !important",
@@ -367,6 +472,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerHoursColon: {
     marginLeft: "-5px !important",
@@ -376,7 +482,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       fontSize: "15px !important",
     },
-    marginTop: "-10px !important",
+    marginTop: "-5px !important",
     marginLeft: "-15px !important",
     marginRight: "5px !important",
     fontWeight: "400 !important",
@@ -384,6 +490,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerMinutesText: {
     [theme.breakpoints.only("xs")]: {
@@ -394,16 +501,18 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerMinutesColon: {
     marginLeft: "-5px !important",
     marginRight: "5px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerMinutesLabel: {
     [theme.breakpoints.only("xs")]: {
       fontSize: "15px !important",
     },
-    marginTop: "-10px !important",
+    marginTop: "-5px !important",
     marginLeft: "-10px !important",
     marginRight: "5px !important",
     fontWeight: "400 !important",
@@ -411,6 +520,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerSecondsText: {
     [theme.breakpoints.only("xs")]: {
@@ -421,12 +531,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center !important",
     color: "white !important",
     letterSpacing: "3px !important",
+    textShadow: "1px 1px 10px #333333",
   },
   timerSecondsLabel: {
     [theme.breakpoints.only("xs")]: {
       fontSize: "15px !important",
     },
-    marginTop: "-10px !important",
+    marginTop: "-5px !important",
     fontWeight: "400 !important",
     fontSize: "22px !important",
     textAlign: "center !important",

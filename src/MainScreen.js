@@ -1,6 +1,8 @@
 import React from "react";
 
-import fatima from "./assets/fatima.jpg";
+import fatima from "./assets/fatima.png";
+import champagne from "./assets/champagne.png";
+import capillaFatima from "./assets/capillaFatima.png";
 import anillos from "./assets/ring.png";
 import regalo from "./assets/regalo.png";
 import { Grid, Typography, Button } from "@mui/material";
@@ -21,27 +23,27 @@ export default function MainScreen() {
   const [mostrarDatos, setMostrarDatos] = React.useState(false);
 
   const mobileVersion = (
-    <Grid container xs={12} className={classes.fatimaYAnillosGrid}>
+    <Grid container xs={12} className={classes.capillaYAnillos}>
       <Grid container xs={12} lg={4} className={classes.anillosConTextoGrid}>
         <Grid item className={classes.anilloGrid}>
           <img src={anillos} alt="anillos" className={classes.anilloIcon} />
         </Grid>
         <Grid item style={{ marginTop: 20 }}>
           <Typography className={classes.teEsperamosFont}>
-            Te esperamos a las 18 hs en
+            Te esperamos a las 17:30 hs en
           </Typography>
           <Typography className={classes.estacionFatimaFont}>
-            ESTACIÓN FÁTIMA
+            CAPILLA DE FÁTIMA
           </Typography>
-          <Typography className={classes.islaFont}>Isla Jorge 290</Typography>
+          <Typography className={classes.islaFont}>Melincué 800</Typography>
           <Typography className={classes.provinciaFont}>
             Provincia de Buenos Aires
           </Typography>
           <Grid className={classes.comoLlegarGrid}>
             <Button
               target="_blank"
-              href="https://goo.gl/maps/8RmrhbMaVFJMeCyD7"
-              className={classes.comoLlegarButton}
+              href="https://goo.gl/maps/WS49fus4UsNwGzug8"
+              className={classes.comoLLegarButton}
             >
               CÓMO LLEGAR
             </Button>
@@ -49,41 +51,83 @@ export default function MainScreen() {
         </Grid>
       </Grid>
       <Grid xs={10} lg={3} xl={3} item className={classes.fatimaGrid}>
-        <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
+        <img src={capillaFatima} alt="capilla" className={classes.fatimaFoto} />
       </Grid>
     </Grid>
   );
 
   const desktopVersion = (
-    <Grid container xs={12} className={classes.fatimaYAnillosGrid}>
-      <Grid xs={10} lg={3} xl={3} item className={classes.fatimaGrid}>
-        <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
+    <Grid xs={12}>
+      <Grid container xs={12} className={classes.capillaYAnillos}>
+        <Grid xs={10} lg={3} xl={3} item className={classes.capillaGrid}>
+          <img
+            src={capillaFatima}
+            alt="capilla"
+            className={classes.capillaFoto}
+          />
+        </Grid>
+
+        <Grid container xs={12} lg={4} className={classes.anillosConTextoGrid}>
+          <Grid item className={classes.anilloGrid}>
+            <img src={anillos} alt="anillos" className={classes.anilloIcon} />
+          </Grid>
+          <Grid item style={{ marginTop: 20 }}>
+            <Typography className={classes.teEsperamosFont}>
+              Te esperamos a las 17:30 hs en
+            </Typography>
+            <Typography className={classes.capillaFatimaFont}>
+              CAPILLA DE FÁTIMA
+            </Typography>
+            <Typography className={classes.islaFont}>Melincué 800</Typography>
+            <Typography className={classes.provinciaFont}>
+              Provincia de Buenos Aires
+            </Typography>
+            <Grid className={classes.comoLlegarGrid}>
+              <Button
+                target="_blank"
+                href="https://goo.gl/maps/WS49fus4UsNwGzug8"
+                className={classes.comoLlegarButton}
+              >
+                CÓMO LLEGAR
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
       </Grid>
 
-      <Grid container xs={12} lg={4} className={classes.anillosConTextoGrid}>
-        <Grid item className={classes.anilloGrid}>
-          <img src={anillos} alt="anillos" className={classes.anilloIcon} />
-        </Grid>
-        <Grid item style={{ marginTop: 20 }}>
-          <Typography className={classes.teEsperamosFont}>
-            Te esperamos a las 18 hs en
-          </Typography>
-          <Typography className={classes.estacionFatimaFont}>
-            ESTACIÓN FÁTIMA
-          </Typography>
-          <Typography className={classes.islaFont}>Isla Jorge 290</Typography>
-          <Typography className={classes.provinciaFont}>
-            Provincia de Buenos Aires
-          </Typography>
-          <Grid className={classes.comoLlegarGrid}>
-            <Button
-              target="_blank"
-              href="https://goo.gl/maps/8RmrhbMaVFJMeCyD7"
-              className={classes.comoLlegarButton}
-            >
-              CÓMO LLEGAR
-            </Button>
+      <Grid container xs={12} className={classes.fatimaYCopas}>
+        <Grid container xs={12} lg={4} className={classes.copasConTextoGrid}>
+          <Grid item className={classes.champagneGrid}>
+            <img
+              src={champagne}
+              alt="champagne"
+              className={classes.champagneIcon}
+            />
           </Grid>
+          <Grid item>
+            <Typography className={classes.losEsperamosFont}>
+              Después de la ceremonia los esperamos para festejar en
+            </Typography>
+            <Typography className={classes.estacionFatimaFont}>
+              ESTACIÓN FÁTIMA
+            </Typography>
+            <Typography className={classes.islaFont}>Isla Jorge 290</Typography>
+            <Typography className={classes.provinciaFont}>
+              Provincia de Buenos Aires
+            </Typography>
+            <Grid className={classes.comoLlegarGrid}>
+              <Button
+                target="_blank"
+                href="https://goo.gl/maps/5bR4BastEa2kdEJ57"
+                className={classes.comoLlegarButton}
+              >
+                CÓMO LLEGAR
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid xs={10} lg={3} xl={3} item className={classes.fatimaGrid}>
+          <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
         </Grid>
       </Grid>
     </Grid>
@@ -215,18 +259,7 @@ export default function MainScreen() {
         ) : null}
         <Grid item style={{ marginTop: 15 }}>
           <Button
-            style={{
-              fontFamily: "Montserrat",
-              color: "white",
-              fontSize: 20,
-              letterSpacing: 2,
-              backgroundColor: "#d3955d",
-              textShadow: "1px 1px grey",
-              marginTop: 30,
-              height: 60,
-              width: 220,
-              borderRadius: 8,
-            }}
+            className={classes.verDatosButton}
             onClick={() => {
               setMostrarDatos(!mostrarDatos);
             }}
