@@ -25,11 +25,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   nosCasamosGrid: {
-    [theme.breakpoints.up("lg")]: {
-      height: 600,
-      maxWidth: 500,
-      marginRight: "4em !important",
-    },
     backgroundColor: "rgba(122, 130, 137, 0.4)",
     [theme.breakpoints.only("xs")]: {
       height: 100,
@@ -37,7 +32,16 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "0.5em !important",
       marginLeft: "0.5em !important",
     },
-    [theme.breakpoints.up("xl")]: {
+    [theme.breakpoints.only("md")]: {
+      height: 200,
+      maxWidth: 500,
+    },
+    [theme.breakpoints.only("lg")]: {
+      height: 600,
+      maxWidth: 500,
+      marginRight: "4em !important",
+    },
+    [theme.breakpoints.only("xl")]: {
       marginRight: "10em !important",
     },
   },
@@ -85,12 +89,19 @@ const useStyles = makeStyles((theme) => ({
   },
 
   capillaYAnillos: {
+    [theme.breakpoints.only("xs")]: {
+      height: "730px !important",
+      justifyContent: "center",
+    },
     height: 550,
     display: "flex !important",
     justifyContent: "space-between",
   },
 
   fatimaYCopas: {
+    [theme.breakpoints.only("xs")]: {
+      justifyContent: "center !important",
+    },
     height: 650,
     display: "flex !important",
     justifyContent: "space-between",
@@ -102,8 +113,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       marginRight: "230px !important",
     },
+    [theme.breakpoints.only("lg")]: {
+      marginRight: "270px !important",
+    },
     [theme.breakpoints.only("xs")]: {
-      marginLeft: "10px !important",
+      justifyContent: "center",
+      marginLeft: "0px !important",
       marginTop: "50px !important",
     },
     marginLeft: "70px !important",
@@ -118,8 +133,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "100px !important",
     },
     [theme.breakpoints.only("xs")]: {
-      marginLeft: "10px !important",
-      marginTop: "50px !important",
+      justifyContent: "center",
+      marginLeft: "0px !important",
+      marginTop: "0px !important",
     },
 
     marginLeft: "140px !important",
@@ -128,8 +144,8 @@ const useStyles = makeStyles((theme) => ({
 
   fatimaFoto: {
     [theme.breakpoints.only("xs")]: {
-      height: 250,
-      marginLeft: 17,
+      height: 260,
+      width: 260,
     },
     maxHeight: 500,
     borderRadius: 3,
@@ -137,8 +153,8 @@ const useStyles = makeStyles((theme) => ({
 
   capillaFoto: {
     [theme.breakpoints.only("xs")]: {
-      height: 250,
-      marginLeft: 17,
+      height: 260,
+      width: 260,
     },
     height: 458,
     width: 458,
@@ -167,8 +183,11 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "210px !important",
       height: 400,
     },
+    [theme.breakpoints.only("lg")]: {
+      marginLeft: "140px !important",
+    },
     [theme.breakpoints.only("xs")]: {
-      marginTop: "30px !important",
+      marginTop: "0px !important",
       marginLeft: "0px !important",
       marginRight: "0px !important",
     },
@@ -176,7 +195,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column !important",
     justifySelf: "flex-end",
     marginTop: "100px !important",
-    marginRight: "145px !important",
   },
 
   anilloGrid: {
@@ -204,7 +222,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "25px !important",
     },
     [theme.breakpoints.only("xs")]: {
-      fontSize: "15px !important",
+      fontSize: "16px !important",
       marginLeft: "15px !important",
       marginRight: "15px !important",
     },
@@ -393,7 +411,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       marginLeft: "10px !important",
       marginRight: "10px !important",
-      fontSize: "18px !important",
+      fontSize: "15px !important",
     },
     fontWeight: "400 !important",
     fontSize: "25px !important",
@@ -405,7 +423,7 @@ const useStyles = makeStyles((theme) => ({
   },
   regaloGraciasText: {
     [theme.breakpoints.only("xs")]: {
-      fontSize: "18px !important",
+      fontSize: "15px !important",
     },
     marginTop: "40px !important",
     fontWeight: "400 !important",
