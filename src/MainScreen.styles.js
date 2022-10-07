@@ -1,95 +1,22 @@
 import { makeStyles } from "@mui/styles";
 import copas from "./assets/copas.png";
-import nosotros from "./assets/nosotros.jpg";
-import nosotros3 from "./assets/nosotros3.jpg";
 
-const screenWidth = window.screen.width;
 const useStyles = makeStyles((theme) => ({
   nosotrosGrid: {
-    backgroundSize: "cover",
-    backgroundImage: `url(${nosotros3})`,
-    [theme.breakpoints.up("xl")]: {
-      height: 1000,
-    },
-    [theme.breakpoints.only("xs")]: {
-      height: 450,
-      backgroundImage: `url(${nosotros})`,
-    },
-    [theme.breakpoints.only("lg")]: {
-      height: 800,
-    },
-    height: 700,
     display: "flex",
-    justifyContent: "flex-end",
-    alignItems: "center",
+    justifyContent: "center !important",
   },
 
-  nosCasamosGrid: {
-    backgroundColor: "rgba(122, 130, 137, 0.4)",
-    [theme.breakpoints.only("xs")]: {
-      height: 100,
-      marginTop: "19em !important",
-      marginRight: "0.5em !important",
-      marginLeft: "0.5em !important",
-    },
-    [theme.breakpoints.only("md")]: {
-      height: 200,
-      maxWidth: 500,
-    },
-    [theme.breakpoints.only("lg")]: {
-      height: 600,
-      maxWidth: 500,
-      marginRight: "4em !important",
-    },
-    [theme.breakpoints.only("xl")]: {
-      marginRight: "10em !important",
-    },
-  },
-  nosCasamosFont: {
-    color: "white",
-    fontFamily: "Amatic SC, cursive !important",
-    [theme.breakpoints.only("xs")]: {
-      fontSize: "30px !important",
-      marginTop: "5px !important",
-      textAlign: "center !important",
-    },
-    [theme.breakpoints.only("xl")]: {
-      marginRight: "100px !important",
-      marginLeft: "100px !important",
-      marginTop: "100px !important",
-      fontSize: "100px !important",
-    },
-    [theme.breakpoints.only("lg")]: {
-      marginLeft: "80px !important",
-      fontSize: "100px !important",
-      fontWeight: "bold !important",
-      marginTop: "100px !important",
-    },
-  },
-  nosCasamosIneMati: {
-    color: "white",
-    fontFamily: "Amatic SC, cursive !important",
-    [theme.breakpoints.only("xs")]: {
-      fontSize: "20px !important",
-    },
-    fontSize: "90px !important",
-    textAlign: "center",
-  },
-  nosCasamosFechaFont: {
-    color: "white",
-    fontFamily: "Amatic SC, cursive !important",
-    [theme.breakpoints.only("xs")]: {
-      marginTop: "-5px !important",
-      fontSize: "33px !important",
-      fontWeight: "normal !important",
-    },
-    fontSize: "50px !important",
-    fontWeight: "bold !important",
-    textAlign: "center",
+  nosotrosFoto: {
+    width: "100% !important",
   },
 
   capillaYAnillos: {
     [theme.breakpoints.only("xs")]: {
+      height: "730px !important",
+      justifyContent: "center",
+    },
+    [theme.breakpoints.only("sm")]: {
       height: "730px !important",
       justifyContent: "center",
     },
@@ -100,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
 
   fatimaYCopas: {
     [theme.breakpoints.only("xs")]: {
+      justifyContent: "center !important",
+    },
+    [theme.breakpoints.only("sm")]: {
       justifyContent: "center !important",
     },
     height: 650,
@@ -121,6 +51,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0px !important",
       marginTop: "50px !important",
     },
+    [theme.breakpoints.only("sm")]: {
+      justifyContent: "center",
+      marginLeft: "0px !important",
+      marginTop: "10% !important",
+    },
+    [theme.breakpoints.only("md")]: {
+      justifyContent: "center",
+      marginLeft: "0px !important",
+      marginTop: "50px !important",
+    },
     marginLeft: "70px !important",
     marginTop: "100px !important",
   },
@@ -137,7 +77,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0px !important",
       marginTop: "0px !important",
     },
-
+    [theme.breakpoints.only("sm")]: {
+      justifyContent: "center",
+      marginLeft: "0px !important",
+      marginTop: "10% !important",
+    },
+    [theme.breakpoints.only("md")]: {
+      justifyContent: "center",
+      marginLeft: "0px !important",
+      marginTop: "10% !important",
+    },
     marginLeft: "140px !important",
     marginTop: "100px !important",
   },
@@ -171,6 +120,16 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "0px !important",
       marginRight: "0px !important",
     },
+    [theme.breakpoints.only("sm")]: {
+      marginTop: "10% !important",
+      marginLeft: "0px !important",
+      marginRight: "0px !important",
+    },
+    [theme.breakpoints.only("md")]: {
+      marginTop: "10% !important",
+      marginLeft: "0px !important",
+      marginRight: "0px !important",
+    },
     display: "flex !important",
     flexDirection: "column !important",
     justifySelf: "flex-end",
@@ -185,6 +144,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only("lg")]: {
       marginLeft: "140px !important",
+    },
+    [theme.breakpoints.only("sm")]: {
+      marginTop: "45% !important",
+      marginLeft: "5% !important",
+      marginRight: "5% !important",
     },
     [theme.breakpoints.only("xs")]: {
       marginTop: "0px !important",
@@ -213,8 +177,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   champagneIcon: {
-    height: 60,
-    width: 60,
+    height: "60px",
+    width: "60px",
   },
 
   teEsperamosFont: {
@@ -332,6 +296,11 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center !important",
       marginTop: "60px !important",
     },
+    [theme.breakpoints.only("sm")]: {
+      height: "600px !important",
+      textAlign: "center !important",
+      marginTop: "100% !important",
+    },
     height: 400,
     width: "inherit",
     marginTop: 0,
@@ -371,7 +340,7 @@ const useStyles = makeStyles((theme) => ({
 
   confirmarAsistenciaButton: {
     [theme.breakpoints.only("xs")]: {
-      width: "300px !important",
+      width: "90% !important",
       height: "55px !important",
       fontSize: "18px !important",
     },
@@ -412,6 +381,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "10px !important",
       marginRight: "10px !important",
       fontSize: "15px !important",
+      letterSpacing: "3px !important",
     },
     fontWeight: "400 !important",
     fontSize: "25px !important",
@@ -424,6 +394,7 @@ const useStyles = makeStyles((theme) => ({
   regaloGraciasText: {
     [theme.breakpoints.only("xs")]: {
       fontSize: "15px !important",
+      letterSpacing: "3px !important",
     },
     marginTop: "40px !important",
     fontWeight: "400 !important",

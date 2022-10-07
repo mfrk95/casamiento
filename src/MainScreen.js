@@ -1,5 +1,7 @@
 import React from "react";
 
+import mob from "./assets/mob.jpg";
+import web from "./assets/web.jpg";
 import fatima from "./assets/fatima.png";
 import champagne from "./assets/champagne.png";
 import capillaFatima from "./assets/capillaFatima.png";
@@ -15,26 +17,20 @@ import Countdown from "react-countdown";
 export default function MainScreen() {
   const classes = useStyles();
   const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.only("xs"));
-  const xs = useMediaQuery(theme.breakpoints.only("xs"));
-  const sm = useMediaQuery(theme.breakpoints.only("sm"));
-  const md = useMediaQuery(theme.breakpoints.only("md"));
-  const lg = useMediaQuery(theme.breakpoints.only("lg"));
-  const xl = useMediaQuery(theme.breakpoints.only("xl"));
-  console.log("xs: ", xs);
-  console.log("sm: ", sm);
-  console.log("md: ", md);
-  console.log("lg: ", lg);
-  console.log("xl: ", xl);
-  const nosCasamosString = "¡NOS CASAMOS!";
-  const nosCasamosIneMati = "Ine & Mati";
-  const nosCasamosFecha = "Sábado 17 de Diciembre 2022";
+  const mobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const [mostrarDatos, setMostrarDatos] = React.useState(false);
 
   const mobileVersion = (
     <Grid xs={12}>
       <Grid container xs={12} className={classes.capillaYAnillos}>
-        <Grid container xs={12} lg={4} className={classes.anillosConTextoGrid}>
+        <Grid
+          container
+          xs={12}
+          md={4}
+          lg={6}
+          className={classes.anillosConTextoGrid}
+        >
           <Grid item className={classes.anilloGrid}>
             <img src={anillos} alt="anillos" className={classes.anilloIcon} />
           </Grid>
@@ -109,7 +105,7 @@ export default function MainScreen() {
   const desktopVersion = (
     <Grid xs={12}>
       <Grid container xs={12} className={classes.capillaYAnillos}>
-        <Grid xs={10} lg={3} xl={3} item className={classes.capillaGrid}>
+        <Grid xs={10} md={6} lg={3} xl={3} item className={classes.capillaGrid}>
           <img
             src={capillaFatima}
             alt="capilla"
@@ -117,7 +113,13 @@ export default function MainScreen() {
           />
         </Grid>
 
-        <Grid container xs={12} lg={4} className={classes.anillosConTextoGrid}>
+        <Grid
+          container
+          xs={12}
+          md={6}
+          lg={4}
+          className={classes.anillosConTextoGrid}
+        >
           <Grid item className={classes.anilloGrid}>
             <img src={anillos} alt="anillos" className={classes.anilloIcon} />
           </Grid>
@@ -146,7 +148,13 @@ export default function MainScreen() {
       </Grid>
 
       <Grid container xs={12} className={classes.fatimaYCopas}>
-        <Grid container xs={12} lg={4} className={classes.copasConTextoGrid}>
+        <Grid
+          container
+          xs={12}
+          md={6}
+          lg={4}
+          className={classes.copasConTextoGrid}
+        >
           <Grid item className={classes.champagneGrid}>
             <img
               src={champagne}
@@ -176,7 +184,7 @@ export default function MainScreen() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid xs={10} lg={3} xl={3} item className={classes.fatimaGrid}>
+        <Grid xs={10} lg={3} md={6} xl={3} item className={classes.fatimaGrid}>
           <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
         </Grid>
       </Grid>
@@ -221,19 +229,7 @@ export default function MainScreen() {
   return (
     <Grid container>
       <Grid item className={classes.nosotrosGrid} xs={12} lg={12}>
-        <Grid item xs={12} lg={5} xl={5} className={classes.nosCasamosGrid}>
-          <Typography className={classes.nosCasamosFont}>
-            {nosCasamosString}
-          </Typography>
-          {mobile ? null : (
-            <Typography className={classes.nosCasamosIneMati}>
-              {nosCasamosIneMati}
-            </Typography>
-          )}
-          <Typography className={classes.nosCasamosFechaFont}>
-            {nosCasamosFecha}
-          </Typography>
-        </Grid>
+        <img className={classes.nosotrosFoto} src={mobile ? mob : web} />
       </Grid>
 
       {mobile ? mobileVersion : desktopVersion}
@@ -303,7 +299,7 @@ export default function MainScreen() {
                 color: "#455864",
               }}
             >
-              Alias: MADRE.PATIO.RAYO
+              Alias: INEYMATISECASAN
             </Typography>
           </Grid>
         ) : null}
