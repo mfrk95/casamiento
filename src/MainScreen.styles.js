@@ -342,7 +342,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only("xs")]: {
       width: "90% !important",
       height: "55px !important",
-      fontSize: "18px !important",
+      fontSize: "15px !important",
     },
     fontFamily: "Montserrat !important",
     color: "white !important",
