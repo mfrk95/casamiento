@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
 
   nosotrosFoto: {
     width: "100% !important",
+    height: "100% !important",
   },
 
   capillaYAnillos: {
