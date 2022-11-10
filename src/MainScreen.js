@@ -82,7 +82,7 @@ export default function MainScreen() {
           </Grid>
           <Grid item style={{ marginTop: 20 }}>
             <Typography className={classes.teEsperamosFont}>
-              Te esperamos a las 17:30 hs en
+              Te esperamos a las 17:00 hs en
             </Typography>
             <Typography className={classes.capillaFatimaFont}>
               ESTACIÓN FÁTIMA
