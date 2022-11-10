@@ -36,48 +36,9 @@ export default function MainScreen() {
           </Grid>
           <Grid item style={{ marginTop: 20 }}>
             <Typography className={classes.teEsperamosFont}>
-              Te esperamos a las 17:30 hs en la
+              Te esperamos a las 17:00 hs en
             </Typography>
             <Typography className={classes.capillaFatimaFont}>
-              CAPILLA DE FÁTIMA
-            </Typography>
-            <Typography className={classes.islaFont}>Melincué 800</Typography>
-            <Typography className={classes.provinciaFont}>
-              Provincia de Buenos Aires
-            </Typography>
-            <Grid className={classes.comoLlegarGrid}>
-              <Button
-                target="_blank"
-                href="https://goo.gl/maps/WS49fus4UsNwGzug8"
-                className={classes.comoLlegarButton}
-              >
-                CÓMO LLEGAR
-              </Button>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid xs={10} lg={3} xl={3} item className={classes.capillaGrid}>
-          <img
-            src={capillaFatima}
-            alt="capilla"
-            className={classes.capillaFoto}
-          />
-        </Grid>
-      </Grid>
-      <Grid container xs={12} className={classes.fatimaYCopas}>
-        <Grid container xs={12} lg={4} className={classes.copasConTextoGrid}>
-          <Grid item className={classes.champagneGrid}>
-            <img
-              src={champagne}
-              alt="champagne"
-              className={classes.champagneIcon}
-            />
-          </Grid>
-          <Grid item style={{ marginTop: 20 }}>
-            <Typography className={classes.losEsperamosFont}>
-              Después de la ceremonia te invitamos para festejar en
-            </Typography>
-            <Typography className={classes.estacionFatimaFont}>
               ESTACIÓN FÁTIMA
             </Typography>
             <Typography className={classes.islaFont}>Isla Jorge 290</Typography>
@@ -95,8 +56,8 @@ export default function MainScreen() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid xs={10} lg={3} xl={3} item className={classes.fatimaGrid}>
-          <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
+        <Grid xs={10} lg={3} xl={3} item className={classes.capillaGrid}>
+          <img src={fatima} alt="capilla" className={classes.capillaFoto} />
         </Grid>
       </Grid>
     </Grid>
@@ -106,11 +67,7 @@ export default function MainScreen() {
     <Grid xs={12}>
       <Grid container xs={12} className={classes.capillaYAnillos}>
         <Grid xs={10} md={6} lg={3} xl={3} item className={classes.capillaGrid}>
-          <img
-            src={capillaFatima}
-            alt="capilla"
-            className={classes.capillaFoto}
-          />
+          <img src={fatima} alt="capilla" className={classes.capillaFoto} />
         </Grid>
 
         <Grid
@@ -125,48 +82,9 @@ export default function MainScreen() {
           </Grid>
           <Grid item style={{ marginTop: 20 }}>
             <Typography className={classes.teEsperamosFont}>
-              Te esperamos a las 17:30 hs en la
+              Te esperamos a las 17:30 hs en
             </Typography>
             <Typography className={classes.capillaFatimaFont}>
-              CAPILLA DE FÁTIMA
-            </Typography>
-            <Typography className={classes.islaFont}>Melincué 800</Typography>
-            <Typography className={classes.provinciaFont}>
-              Provincia de Buenos Aires
-            </Typography>
-            <Grid className={classes.comoLlegarGrid}>
-              <Button
-                target="_blank"
-                href="https://goo.gl/maps/WS49fus4UsNwGzug8"
-                className={classes.comoLlegarButton}
-              >
-                CÓMO LLEGAR
-              </Button>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-
-      <Grid container xs={12} className={classes.fatimaYCopas}>
-        <Grid
-          container
-          xs={12}
-          md={6}
-          lg={4}
-          className={classes.copasConTextoGrid}
-        >
-          <Grid item className={classes.champagneGrid}>
-            <img
-              src={champagne}
-              alt="champagne"
-              className={classes.champagneIcon}
-            />
-          </Grid>
-          <Grid item>
-            <Typography className={classes.losEsperamosFont}>
-              Después de la ceremonia te invitamos para festejar en
-            </Typography>
-            <Typography className={classes.estacionFatimaFont}>
               ESTACIÓN FÁTIMA
             </Typography>
             <Typography className={classes.islaFont}>Isla Jorge 290</Typography>
@@ -183,9 +101,6 @@ export default function MainScreen() {
               </Button>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid xs={10} lg={3} md={6} xl={3} item className={classes.fatimaGrid}>
-          <img src={fatima} alt="fatima" className={classes.fatimaFoto} />
         </Grid>
       </Grid>
     </Grid>
